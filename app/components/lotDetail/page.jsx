@@ -13,7 +13,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
   const {setCart,addItem,cart} = useCart()
     //Function to save to localStorage
    
-    if (!data.images.length) {
+    if (!data?.images?.length) {
         return <p>No images provided.</p>;
     }
     
@@ -31,12 +31,12 @@ const [currentIndex, setCurrentIndex] = useState(0);
             <div className={styles.galleryContainer}>
                 {/* Main Large Image */}
                 <div className={styles.mainImageContainer}>
-                    <img src={data.images[currentIndex]} alt={`Gallery image ${currentIndex + 1}`} className={styles.mainImage} />
+                    <img src={data?.images[currentIndex]} alt={`Gallery image ${currentIndex + 1}`} className={styles.mainImage} />
                 </div>
 
                 {/* Thumbnails */}
                 <div className={styles.thumbnailsContainer}>
-                    {data.images.map((image, index) => (
+                    {data?.images?.map((image, index) => (
                         <div key={index} className={`${styles.thumbnailWrapper} ${index === currentIndex ? styles.active : '' }`} onClick={() => handleThumbnailClick(index)} >
                             <img src={image} alt={`Thumbnail ${index + 1}`} className={styles.thumbnail} />
                         </div>
@@ -45,7 +45,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
             </div>
             <div className={styles.detailsContainer}>
                 <div className={styles.artistPack}>
-                    <h2>{data.name}</h2>
+                    <h2>{data?.name}</h2>
                     <p>Artist:<span> {data.artist} </span></p>
                     {data.price? <p className={styles.price}>${data.price}</p> : <p>Starting Bid:<span> ${data.startingBid} </span></p>}
                 </div>
@@ -55,11 +55,11 @@ const [currentIndex, setCurrentIndex] = useState(0);
                 <div className={styles.otherDetailsPack}>
                     <li>
                         <p>Year</p>
-                        <p>{data.year}</p>
+                        <p>{data?.year}</p>
                     </li>
                     <li>
                         <p>Category</p>
-                        <p>{data.category}</p>
+                        <p>{data?.category}</p>
                     </li>
                     <li>
                         <p>Themes</p>
@@ -81,10 +81,10 @@ const [currentIndex, setCurrentIndex] = useState(0);
                     </li>
                     <li>
                         <p>Proof of Authenticy</p>
-                        <p>{data.proofOfAuth}</p>
+                        <p>{data?.proofOfAuth}</p>
                     </li>
                 </div>
-                {data.price && <div onClick={()=>addItem(artwork)} className={`btn ${styles.addToCart}`}>Add to cart</div>}
+                {data?.price && <div onClick={()=>addItem(artwork)} className={`btn ${styles.addToCart}`}>Add to cart</div>}
             </div>
             
         </div>
