@@ -1,3 +1,17 @@
+<div align="center">
+
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
+
+</div>
+
+---
+
+![Project preview](./public/images/website-preview.png)
+
 # Edval Art Auction
 
 A web platform for discovering original artwork, exploring live and upcoming auctions, and connecting artists with collectors. The interface brings auction listings, an art marketplace, artist submissions, exhibitions and custom artwork requests into one experience.
